@@ -35,16 +35,41 @@ namespace EhodBoutiqueEnLigne.Controllers
         {
             return View();
         }
+        /*
+                [Authorize]
+                [HttpPost]
+                public IActionResult Create(ProductViewModel product)
+                {
+                    List<string> modelErrors = _productService.CheckProductModelErrors(product);           
 
+                    foreach (string error in modelErrors)
+                    {
+                        ModelState.AddModelError("", error);
+                    }
+
+                    if (ModelState.IsValid)
+                    {
+                        _productService.SaveProduct(product);
+                        return RedirectToAction("Admin");
+                    }
+                    else
+                    {
+                        return View(product);
+                    }
+                }
+        */
         [Authorize]
         [HttpPost]
         public IActionResult Create(ProductViewModel product)
         {
-            List<string> modelErrors = _productService.CheckProductModelErrors(product);           
+            Dictionary<string, List<string>> modelErrors = _productService.CheckProductModelErrors(product);
 
-            foreach (string error in modelErrors)
+            foreach (var propertyName in modelErrors.Keys)
             {
-                ModelState.AddModelError("", error);
+                foreach (var error in modelErrors[propertyName])
+                {
+                    ModelState.AddModelError(propertyName, error);
+                }
             }
 
             if (ModelState.IsValid)

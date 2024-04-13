@@ -91,45 +91,92 @@ namespace EhodBoutiqueEnLigne.Models.Services
         }
 
         // TODO this is an example method, remove it and perform model validation using data annotations
-        public List<string> CheckProductModelErrors(ProductViewModel product)
+        /*        public List<string> CheckProductModelErrors(ProductViewModel product)
+                {
+                    List<string> modelErrors = new List<string>();
+                    if (product.Name == null || string.IsNullOrWhiteSpace(product.Name))
+                    {
+                        modelErrors.Add(_localizer["MissingName"]);
+                    }
+
+                    if (product.Price == null || string.IsNullOrWhiteSpace(product.Price))
+                    {
+                        modelErrors.Add(_localizer["MissingPrice"]);
+                    }
+
+                    if (!Double.TryParse(product.Price, out double pc))
+                    {
+                        modelErrors.Add(_localizer["PriceNotANumber"]);
+                    }
+                    else
+                    {
+                        if (pc <= 0)
+                            modelErrors.Add(_localizer["PriceNotGreaterThanZero"]);
+                    }
+
+                    if (product.Stock == null || string.IsNullOrWhiteSpace(product.Stock))
+                    {
+                        modelErrors.Add(_localizer["MissingQuantity"]);
+                    }
+
+                    if (!int.TryParse(product.Stock, out int qt))
+                    {
+                        modelErrors.Add(_localizer["StockNotAnInteger"]);
+                    }
+                    else
+                    {
+                        if (qt <= 0)
+                            modelErrors.Add(_localizer["StockNotGreaterThanZero"]);
+                    }
+
+                    return modelErrors;
+                }
+        */
+        public Dictionary<string, List<string>> CheckProductModelErrors(ProductViewModel product)
         {
-            List<string> modelErrors = new List<string>();
+            Dictionary<string, List<string>> modelErrors = new Dictionary<string, List<string>>();
+
             if (product.Name == null || string.IsNullOrWhiteSpace(product.Name))
             {
-                modelErrors.Add(_localizer["MissingName"]);
+                AddModelError(modelErrors, "Name", _localizer["MissingName"]);
             }
 
             if (product.Price == null || string.IsNullOrWhiteSpace(product.Price))
             {
-                modelErrors.Add(_localizer["MissingPrice"]);
+                AddModelError(modelErrors, "Price", _localizer["MissingPrice"]);
             }
-
-            if (!Double.TryParse(product.Price, out double pc))
+            else if (!Double.TryParse(product.Price, out double pc))
             {
-                modelErrors.Add(_localizer["PriceNotANumber"]);
+                AddModelError(modelErrors, "Price", _localizer["PriceNotANumber"]);
             }
-            else
+            else if (pc <= 0)
             {
-                if (pc <= 0)
-                    modelErrors.Add(_localizer["PriceNotGreaterThanZero"]);
+                AddModelError(modelErrors, "Price", _localizer["PriceNotGreaterThanZero"]);
             }
 
             if (product.Stock == null || string.IsNullOrWhiteSpace(product.Stock))
             {
-                modelErrors.Add(_localizer["MissingQuantity"]);
+                AddModelError(modelErrors, "Stock", _localizer["MissingQuantity"]);
             }
-
-            if (!int.TryParse(product.Stock, out int qt))
+            else if (!int.TryParse(product.Stock, out int qt))
             {
-                modelErrors.Add(_localizer["StockNotAnInteger"]);
+                AddModelError(modelErrors, "Stock", _localizer["StockNotAnInteger"]);
             }
-            else
+            else if (qt <= 0)
             {
-                if (qt <= 0)
-                    modelErrors.Add(_localizer["StockNotGreaterThanZero"]);
+                AddModelError(modelErrors, "Stock", _localizer["StockNotGreaterThanZero"]);
             }
 
             return modelErrors;
+        }
+
+        private void AddModelError(Dictionary<string, List<string>> modelErrors, string propertyName, string errorMessage)
+        {
+            if (!modelErrors.ContainsKey(propertyName))
+            {
+                modelErrors[propertyName] = new List<string>();
+            }
+            modelErrors[propertyName].Add(errorMessage);
         }
 
         public void SaveProduct(ProductViewModel product)
