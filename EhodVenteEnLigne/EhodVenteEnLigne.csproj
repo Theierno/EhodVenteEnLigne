@@ -63,6 +63,9 @@
     <EmbeddedResource Update="Resources\Models\ViewModels\LanguageViewModel.wo.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Views\Shared\Components\LanguageSelector\Default.wo.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

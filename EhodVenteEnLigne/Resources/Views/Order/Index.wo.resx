@@ -117,25 +117,37 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="MissingName" xml:space="preserve">
-    <value>dougeuleul seu tourr</value>
+  <data name="Address" xml:space="preserve">
+    <value>deukou way</value>
   </data>
-  <data name="MissingPrice" xml:space="preserve">
-    <value>dougeuleul loumouy diar</value>
+  <data name="City" xml:space="preserve">
+    <value>gokh</value>
   </data>
-  <data name="MissingStock" xml:space="preserve">
-    <value>dougeuleul foumou nek</value>
+  <data name="CompleteOrder" xml:space="preserve">
+    <value>parrer dougou</value>
   </data>
-  <data name="PriceNotANumber" xml:space="preserve">
-    <value>ligeu dougeul dou siffre</value>
+  <data name="Country" xml:space="preserve">
+    <value>rew</value>
   </data>
-  <data name="PriceNotGreaterThanZero" xml:space="preserve">
-    <value>ligeu dougeul da wara eup neen</value>
+  <data name="EnterDetails" xml:space="preserve">
+    <value>gnogui lay yeuw taxawu</value>
   </data>
-  <data name="StockNotAnInteger" xml:space="preserve">
-    <value>ligeu dougeul bakhoul</value>
+  <data name="Location" xml:space="preserve">
+    <value>fan geu deuk</value>
   </data>
-  <data name="StockNotGreaterThanZero" xml:space="preserve">
-    <value> foumou wara nek da wara eup sero</value>
+  <data name="Name" xml:space="preserve">
+    <value>tour</value>
+  </data>
+  <data name="OrderTitle" xml:space="preserve">
+    <value>bindeul lou nek fii</value>
+  </data>
+  <data name="ShipSoon" xml:space="preserve">
+    <value>gnogui lakoy indil legui</value>
+  </data>
+  <data name="ShipTo" xml:space="preserve">
+    <value>yonder ko</value>
+  </data>
+  <data name="Zip" xml:space="preserve">
+    <value>tour dekouway</value>
   </data>
 </root>

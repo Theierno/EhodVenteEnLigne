@@ -118,24 +118,24 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="MissingName" xml:space="preserve">
-    <value>dougeuleul seu tourr</value>
+    <value>Veuillez saisir un nom</value>
   </data>
   <data name="MissingPrice" xml:space="preserve">
-    <value>dougeuleul loumouy diar</value>
+    <value>Veuillez saisir un prix</value>
   </data>
   <data name="MissingStock" xml:space="preserve">
-    <value>dougeuleul foumou nek</value>
+    <value>Veuillez saisir un stock</value>
   </data>
   <data name="PriceNotANumber" xml:space="preserve">
-    <value>ligeu dougeul dou siffre</value>
+    <value>La valeur saisie pour le prix doit être un nombre</value>
   </data>
   <data name="PriceNotGreaterThanZero" xml:space="preserve">
-    <value>ligeu dougeul da wara eup neen</value>
+    <value>La prix doit être supérieur à zéro</value>
   </data>
   <data name="StockNotAnInteger" xml:space="preserve">
-    <value>ligeu dougeul bakhoul</value>
+    <value>La valeur saisie pour le stock doit être un entier</value>
   </data>
   <data name="StockNotGreaterThanZero" xml:space="preserve">
-    <value> foumou wara nek da wara eup sero</value>
+    <value>La stock doit être supérieure à zéro</value>
   </data>
 </root>

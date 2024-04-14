@@ -117,25 +117,32 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="MissingName" xml:space="preserve">
-    <value>dougeuleul seu tourr</value>
+  <data name="Administrator" xml:space="preserve">
+    <value>kilifeu</value>
   </data>
-  <data name="MissingPrice" xml:space="preserve">
-    <value>dougeuleul loumouy diar</value>
+  <data name="Create" xml:space="preserve">
+    <value>gnok</value>
   </data>
-  <data name="MissingStock" xml:space="preserve">
-    <value>dougeuleul foumou nek</value>
+  <data name="Delete" xml:space="preserve">
+    <value>dindi</value>
   </data>
-  <data name="PriceNotANumber" xml:space="preserve">
-    <value>ligeu dougeul dou siffre</value>
+  <data name="Description" xml:space="preserve">
+    <value>firndei</value>
   </data>
-  <data name="PriceNotGreaterThanZero" xml:space="preserve">
-    <value>ligeu dougeul da wara eup neen</value>
+  <data name="Name" xml:space="preserve">
+    <value>tour</value>
   </data>
-  <data name="StockNotAnInteger" xml:space="preserve">
-    <value>ligeu dougeul bakhoul</value>
+  <data name="Price" xml:space="preserve">
+    <value>loumouy djar</value>
   </data>
-  <data name="StockNotGreaterThanZero" xml:space="preserve">
-    <value> foumou wara nek da wara eup sero</value>
+  <data name="ProductAdministrationModule" xml:space="preserve">
+    <value>fougnou sento ndougou yi</value>
+  </data>
+  <data name="Stock" xml:space="preserve">
+    <value>tollou way ndjay bi</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>xibar</value>
+    <comment>Details</comment>
   </data>
 </root>
