@@ -2,30 +2,40 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.Extensions.Localization;
+
+
 
 namespace EhodBoutiqueEnLigne.Models.ViewModels
 {
     public class OrderViewModel
     {
+        private readonly IStringLocalizer<OrderViewModel> _localizer;
         [BindNever]
         public int OrderId { get; set; }
 
         [BindNever]
         public ICollection<CartLine> Lines { get; set; }
 
-        [Required(ErrorMessage = "ErrorMissingName")]
+        [Required(ErrorMessageResourceType = typeof(EhodVenteEnLigne.Resources.Models.Order), ErrorMessageResourceName = "ErrorMissingName")]
+
         public string Name { get; set; }
 
-        [Required(ErrorMessage = "ErrorMissingAddress")]
+        [Required(ErrorMessageResourceType = typeof(EhodVenteEnLigne.Resources.Models.Order), ErrorMessageResourceName = "ErrorMissingAddress")]
+
         public string Address { get; set; }
 
-        [Required(ErrorMessage = "ErrorMissingCity")]
+        [Required(ErrorMessageResourceType = typeof(EhodVenteEnLigne.Resources.Models.Order), ErrorMessageResourceName = "ErrorMissingCity")]
+
         public string City { get; set; }
 
-        [Required(ErrorMessage = "ErrorMissingZipCode")]
+        [Required(ErrorMessageResourceType = typeof(EhodVenteEnLigne.Resources.Models.Order), ErrorMessageResourceName = "ErrorMissingZipCode")]
+
         public string Zip { get; set; }
 
-        [Required(ErrorMessage = "ErrorMissingCountry")]
+
+        [Required(ErrorMessageResourceType = typeof(EhodVenteEnLigne.Resources.Models.Order), ErrorMessageResourceName = "ErrorMissingCountry")]
+
         public string Country { get; set; }
 
         [BindNever]

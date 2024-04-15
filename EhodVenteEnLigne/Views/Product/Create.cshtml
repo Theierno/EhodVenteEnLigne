@@ -8,6 +8,7 @@
     <div class="mb-3 col-6">
         <label>@Localizer["Name"]*:</label>
         <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
         @if (ViewData != null && ViewData.ModelState.ContainsKey("Name"))
         {
             foreach (var error in ViewData.ModelState["Name"].Errors)
@@ -19,6 +20,7 @@
     <div class="mb-3 col-4">
         <label>@Localizer["Price"]*:</label>
         <input asp-for="Price" class="form-control" />
+        <span asp-validation-for="Price" class="text-danger"></span>
         @if (ViewData != null && ViewData.ModelState.ContainsKey("Price"))
         {
             foreach (var error in ViewData.ModelState["Price"].Errors)
@@ -30,6 +32,7 @@
     <div class="mb-3 col-8">
         <label>@Localizer["Description"]:</label>
         <input asp-for="Description" class="form-control" />
+        <span asp-validation-for="Description" class="text-danger"></span>
         @if (ViewData != null && ViewData.ModelState.ContainsKey("Description"))
         {
             foreach (var error in ViewData.ModelState["Description"].Errors)
@@ -41,6 +44,7 @@
     <div class="mb-3 col-4">
         <label>@Localizer["Stock"]*:</label>
         <input asp-for="Stock" type="text" class="form-control" />
+        <span asp-validation-for="Stock" class="text-danger"></span>
         @if (ViewData != null && ViewData.ModelState.ContainsKey("Stock"))
         {
             foreach (var error in ViewData.ModelState["Stock"].Errors)
@@ -52,6 +56,7 @@
     <div class="mb-3 col-8">
         <label>@Localizer["Details"]:</label>
         <input asp-for="Details" class="form-control" />
+        <span asp-validation-for="Details" class="text-danger"></span>
         @if (ViewData != null && ViewData.ModelState.ContainsKey("Details"))
         {
             foreach (var error in ViewData.ModelState["Details"].Errors)
